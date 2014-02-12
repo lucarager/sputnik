@@ -22,7 +22,8 @@
     "optimist": "0.3.4",
     "sails-mandrill": "0.0.5",
     "rethinkdb": "~1.11.0-4",
-    "sails-mongo": "~0.9.7"
+    "sails-mongo": "~0.9.7",
+    "grunt-contrib-less": "~0.9.0"
   },
   "scripts": {
     "start": "node app.js",

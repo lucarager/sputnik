@@ -1,0 +1,22 @@
+{
+  "name": "sputnik",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Antariano/sputnik",
+  "authors": [
+    "Connor Peet <connor@connorpeet.com>",
+    "Luca \"Antariano\" Rager <lucarager@gmail.com>"
+  ],
+  "description": "nodejs and mandrill powered subscription / email manager",
+  "main": "app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.0"
+  }
+}
