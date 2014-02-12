@@ -2,10 +2,6 @@
   "name": "sputnik",
   "version": "0.0.0",
   "description": "nodejs and mandrill powered subscription / email manager",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/XereoNet/sputnik.git"
@@ -14,5 +10,18 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/XereoNet/sputnik/issues"
-  }
+  },
+  "dependencies": {
+    "sails": "0.9.8",
+    "grunt": "0.4.1",
+    "sails-disk": "~0.9.0",
+    "ejs": "0.8.4",
+    "optimist": "0.3.4",
+    "sails-mandrill": "0.0.5"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "debug": "node debug app.js"
+  },
+  "main": "app.js"
 }
