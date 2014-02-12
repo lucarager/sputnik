@@ -6,7 +6,10 @@
     "type": "git",
     "url": "https://github.com/XereoNet/sputnik.git"
   },
-  "author": "Luca \"Antariano\" Rager <lucarager@gmail.com>",
+  "contributors": [
+    "Luca \"Antariano\" Rager <lucarager@gmail.com>",
+    "Connor Peet <connor@peet.io>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/XereoNet/sputnik/issues"
@@ -17,7 +20,9 @@
     "sails-disk": "~0.9.0",
     "ejs": "0.8.4",
     "optimist": "0.3.4",
-    "sails-mandrill": "0.0.5"
+    "sails-mandrill": "0.0.5",
+    "rethinkdb": "~1.11.0-4",
+    "sails-mongo": "~0.9.7"
   },
   "scripts": {
     "start": "node app.js",
