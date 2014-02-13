@@ -1,12 +1,26 @@
 @import "../../../bower_components/bootstrap/less/bootstrap.less";
 
 @body-bg: #000;
-@text-color: #fff;
+@text-color: #ccc;
 
 @brand-primary: #1a7ab2;
 
 @font-family-sans-serif:  "Exo 2", Arial, sans-serif;
 @headings-font-weight:    300;
+
+@border-radius-base:        0px;
+@border-radius-large:       0px;
+@border-radius-small:       0px;
+
+@btn-font-weight: 300;
+
+@input-bg:                       #222;
+@input-bg-disabled:              @gray-lighter;
+@input-color:                    #ccc;
+@input-color-placeholder         #666;
+@input-border:                   #444;
+@input-border-focus:             @brand-primary;
+@input-color-placeholder:        @gray-light;
 
 @footer-height: 30px;
 
@@ -17,6 +31,14 @@
 
 html, body {
 	height: 100%;
+}
+
+body {
+	font-weight: 300;
+}
+
+.container {
+	max-width: 960px;
 }
 
 #page {
@@ -30,8 +52,8 @@ html, body {
 }
 
 footer {
-	background: #222;
-	border-top: 1px solid #333;
+	background: #111;
+	border-top: 1px solid #222;
 	text-align: center;
 	font-style: 0.8em;
 	color: #888;
@@ -52,5 +74,65 @@ h1 {
 		height: 1px;
 		margin-top: 10px;
 		#gradient.horizontal-three-colors(@body-bg, #666, 50%, @body-bg);
+	}
+}
+
+.auther {
+	span {
+		font-style: 1.2em;
+		display: block;
+	}
+}
+
+.item {
+	background: #222;
+	margin: 20px 0;
+	padding-left: 70px;
+	position: relative;
+	cursor: pointer;
+	border-right: 2px solid #222;
+
+	&.active {
+		.transition(0.3s);
+		background: #333;
+		border-color: @brand-primary;
+
+		i {
+			.transition(0.3s);
+			background: @brand-primary;
+			color: #fff;
+		}
+
+		h3 {
+			.transition(0.3s);
+			color: #fff;
+		}
+	}
+
+	i {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 50px;
+		text-align: center;
+		height: 100%;
+		background: #333;
+		font-size: 1.5em;
+		color: #666;
+		line-height: 2em;
+	}
+
+	p {
+		color: #aaa;
+	}
+}
+
+.btn-lg {
+	background: none;
+	margin: 50px 0;
+	border-radius: 3px;
+
+	&:hover {
+		background: @brand-primary;
 	}
 }
