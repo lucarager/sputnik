@@ -30,6 +30,21 @@ module.exports.routes = {
 
   '/': {
     view: 'home/index'
+  },
+
+  'post /channel': {
+    controller: 'ChannelController',
+    action: 'all'
+  },
+
+  'post /user/make': {
+    controller: 'UserController',
+    action: 'make'
+  },
+
+  'post /user/save': {
+    controller: 'UserController',
+    action: 'save'
   }
 };
 
