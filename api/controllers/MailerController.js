@@ -1,5 +1,10 @@
 module.exports = {
     send: function (req, res) {
+
+        if (req.param('passkey') != sails.config.mandrill.passkey) {
+            return res.json({}, 403);
+        }
+
         var mandrill = require('mandrill-api/mandrill'),
             mandrill_client = new mandrill.Mandrill(sails.config.mandrill.apiKey),
             message = {
@@ -26,7 +31,6 @@ module.exports = {
             };
             if (req.param('send_at')) directive.send_at = req.param('send_at');
 
-            debugger;
             return res.json(mandrill_client.messages.send(directive));
         });
     }

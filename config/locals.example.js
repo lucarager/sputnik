@@ -13,6 +13,7 @@ module.exports = {
 
   mandrill: {
     apiKey: 'somekey',
+    passkey: 'very seekrit',
     from: {
       name: 'YourSite',
       email: 'no-reply@example.com'
