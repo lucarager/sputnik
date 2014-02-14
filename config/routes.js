@@ -32,6 +32,10 @@ module.exports.routes = {
     view: 'home/index'
   },
 
+  '/admin': {
+    view: 'home/index'
+  },
+
   'post /channel': {
     controller: 'ChannelController',
     action: 'all'
@@ -45,6 +49,11 @@ module.exports.routes = {
   'post /user/save': {
     controller: 'UserController',
     action: 'save'
+  },
+
+  'post /mail': {
+    controller: 'MailerController',
+    action: 'send'
   }
 };
 
