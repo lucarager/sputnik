@@ -12,11 +12,6 @@
 
 module.exports.session = {
 
-  // Session secret is automatically generated when your new app is created
-  // Replace at your own risk in production-- you will invalidate the cookies of your users,
-  // forcing them to log in again. 
-  secret: '9a3a9e39a4b5249699526474ba2331cc'
-
 
   // In production, uncomment the following lines to set up a shared redis session store
   // that can be shared across multiple Sails.js servers
