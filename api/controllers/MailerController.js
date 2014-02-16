@@ -2,7 +2,7 @@ module.exports = {
     send: function (req, res) {
 
         if (req.param('passkey') != sails.config.mandrill.passkey) {
-            return res.json({}, 403);   
+            return res.json({}, 403);
         }
 
         var mandrill = require('mandrill-api/mandrill'),
@@ -15,7 +15,7 @@ module.exports = {
                 to: []
             };
 
-        User.find({subscriptions: req.param('channel')}).done(function (err, users) {
+        User.find({subscriptions: req.param('channel').id}).done(function (err, users) {
             if (err) {
                 console.log(err);
                 return res.json({}, 500);
@@ -31,7 +31,14 @@ module.exports = {
             };
             if (req.param('send_at')) directive.send_at = req.param('send_at');
 
-            return res.json(mandrill_client.messages.send(directive));
+           mandrill_client.messages.send(directive,
+                function (result) {
+                    return res.json(result);
+                },
+                function (error) {         
+                    return res.json(error, 500);
+                }
+            );
         });
     }
 };

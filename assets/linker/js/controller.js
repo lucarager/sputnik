@@ -60,3 +60,31 @@ sputnikApp.controller('IndexController', ['$http', '$scope',
     };
   }
 ]);
+
+sputnikApp.controller('AdminController', ['$http', '$scope',
+  function($http, $scope) {
+    $scope.channels = {};
+    $scope.message = {
+      channel: ''
+    };
+    $scope.result = [null, {}];
+
+    $http.post('/channel').success(function(result) {
+      $scope.channels = result;
+    });
+
+    $scope.send = function() {
+      $scope.result = [0, {}];
+
+      $http({
+        method: 'POST',
+        url: '/mail',
+        data: $scope.message
+      }).success(function(data) {
+        $scope.result = [200, data];
+      }).error(function(data, status) {
+        $scope.result = [status, {}];
+      });
+    };
+  }
+]);
