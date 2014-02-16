@@ -21,36 +21,7 @@
         <div class="header">
           <h1>XereoNet Mailing List - Dream It, Do It.</h1>
         </div>
-        <div ng-controller="IndexController" class="container">
-          <div class="alert alert-{{ login.message[0] }}" ng-if="login.message.length">{{ login.message[1] }}</div>
-          <div class="row auther" ng-if="!login.logged">
-            <div class="col-md-3">
-              <span>Load settings, or make a new account</span>
-            </div>
-            <div class="col-md-3"><input type="text" class="form-control" placeholder="Email" ng-model="user.email"></div>
-            <div class="col-md-3"><input type="password" class="form-control" placeholder="Password" ng-model="user.password"></div>
-            <div class="col-md-3">
-              <button class="btn btn-primary btn-block" ng-click="login.go(user)" ng-disabled="login.loading">
-                <i class="ion-looping" ng-if="login.loading"></i>
-                Go
-              </button>
-            </div>
-          </div>
-          <div ng-repeat="channel in channels">
-            <div class="row item" ng-class="{active: channel.on}" ng-click="channel.on = !channel.on">
-              <i class="ion-close-circled" ng-if="!channel.on"></i>
-              <i class="ion-checkmark-circled" ng-if="channel.on"></i>
-              <h3>{{ channel.name }}</h3>
-              <p>{{ channel.description }}</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-md-offset-4">
-            <button class="btn btn-primary btn-block btn-lg" ng-click="save()" ng-disabled="!login.logged || save_text[0]">
-              <span class="ion-looping" ng-if="save_text[0]"></span>
-              Save
-            </button>
-          </div>
-        </div>
+        <%- body %>
       </div>
   </div>
   <footer>

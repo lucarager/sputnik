@@ -29,11 +29,11 @@
 module.exports.routes = {
 
   '/': {
-    view: 'home/index'
+    view: 'ng-controllers/index'
   },
 
   '/admin': {
-    view: 'home/index'
+    view: 'ng-controllers/admin'
   },
 
   'post /channel': {
