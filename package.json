@@ -1,6 +1,6 @@
 {
   "name": "sputnik",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "nodejs and mandrill powered subscription / email manager",
   "repository": {
     "type": "git",
@@ -21,7 +21,6 @@
     "ejs": "0.8.4",
     "optimist": "0.3.4",
     "sails-mandrill": "0.0.5",
-    "rethinkdb": "~1.11.0-4",
     "sails-mongo": "~0.9.7",
     "grunt-contrib-less": "~0.9.0",
     "bcrypt": "~0.7.7",
